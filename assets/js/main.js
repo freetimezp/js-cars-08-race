@@ -40,9 +40,33 @@ const swiperHome = new Swiper(".home__swiper", {
 });
 
 
-
-
 /*=============== GSAP ANIMATION ===============*/
+gsap.from(".home__panel-1", { y: -1000, duration: 2 });
+gsap.from(".home__panel-2", { y: 1000, duration: 2 });
+gsap.from(".home__image", { x: 1000, duration: 2.5, delay: 1 });
+gsap.from(".home__titles", { x: 100, opacity: 0, scale: 150, delay: 3, duration: 2.5 });
+
 
 
 /*=============== ADD BLUR HEADER ===============*/
+const blurHeader = () => {
+    const header = document.getElementById("header");
+
+    this.scrollY >= 50 ? header.classList.add("blur-header") : header.classList.remove("blur-header");
+}
+
+window.addEventListener("scroll", blurHeader);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
